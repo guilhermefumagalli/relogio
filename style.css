@@ -1,0 +1,149 @@
+body {
+    background-color: #E57373;
+    font-family: "Open Sans", sans-serif ;
+  }
+  
+  .relogio {
+    box-sizing: border-box;
+    width: 300px;
+    height: 300px;
+    border: 15px solid #37474F;
+    background-color: #f9f9f9;
+    border-radius: 50%;
+    box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14),
+      0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px 0 rgba(0, 0, 0, 0.2),
+      inset 0 12px 17px 2px rgba(0, 0, 0, 0.14),
+      inset 0 5px 22px 4px rgba(0, 0, 0, 0.12),
+      inset 0 7px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .relogio,
+  .relogio__ponteiro,
+  .relogio__numero,
+  .relogio__ponto {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .relogio__numero {
+    font-family: monospace;
+    font-size: 3rem;
+    color: #392c3e;
+  }
+  
+  .relogio__numero:after,
+  .relogio__numero:before {
+    display: block;
+    font-size: 1.5rem;
+    position: absolute;
+  }
+  
+  .relogio__numero__12 {
+    transform: translate(-50%, -267%);
+  }
+  
+  .relogio__numero__12:before {
+    content: "11";
+    top: 24px;
+    left: -44px;
+  }
+  
+  .relogio__numero__12:after {
+    content: "1";
+    top: 24px;
+    left: 69px;
+  }
+  
+  .relogio__numero__3 {
+    transform: translate(405%, -50%);
+  }
+  
+  .relogio__numero__3:before {
+    content: "2";
+    top: -37px;
+    left: -11px;
+  }
+  
+  .relogio__numero__3:after {
+    content: "4";
+    top: 56px;
+    left: -11px;
+  }
+  
+  .relogio__numero__6 {
+    transform: translate(-50%, 167%);
+  }
+  
+  .relogio__numero__6:before {
+    content: "7";
+    top: -5px;
+    left: -50px;
+  }
+  
+  .relogio__numero__6:after {
+    content: "5";
+    top: -5px;
+    left: 58px;
+  }
+  
+  .relogio__numero__9 {
+    transform: translate(-492%, -50%);
+  }
+  
+  .relogio__numero__9:before {
+    content: "8";
+    top: 56px;
+    left: 21px;
+  }
+  
+  .relogio__numero__9:after {
+    content: "10";
+    top: -37px;
+    left: 13px;
+  }
+  
+  /* Ponto */
+  
+  .relogio__ponto {
+    width: 13px;
+    height: 13px;
+    background-color: #fff;
+    border: 3px solid #101010;
+    border-radius:100%;
+    z-index: 2;
+  }
+  
+  /* Ponteiro */
+  
+  .relogio__ponteiro {
+    background-color: #101010;
+    transform: translate(-97%, -50%) rotate(90deg);
+    transform-origin: 100%;
+  }
+  
+  .relogio__ponteiro__hora {
+    width: 50px;
+    height: 1px;
+    border-top: 0px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-left: 7px solid #57919c;
+  }
+  
+  .relogio__ponteiro__minuto {
+    width: 70px;
+    height: 0px;
+    border-top: 0px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-left: 7px solid #57919c;
+  }
+  
+  .relogio__ponteiro__segundo {
+    width: 75px;
+    height: 0px;
+    border-top: 0px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 7px solid #57919c;
+    background-color: #392c3e;
+  }
